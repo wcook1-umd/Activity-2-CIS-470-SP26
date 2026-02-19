@@ -102,7 +102,7 @@
                 upperLimit = Math.min(bracket.upperBound, taxableIncome);
             }
 
-            const taxableAmount = upperLimit + bracket.lowerBound;
+            const taxableAmount = upperLimit - bracket.lowerBound;
 
             totalTax += taxableAmount * bracket.rate;
 
@@ -125,19 +125,19 @@
         if(filingStatus==="individual"){
             return [
                 { lowerBound: 0, upperBound: 10000, rate: 0.10 },
-                { lowerBound: 10001, upperBound: 40000, rate: 0.12 },
-                { lowerBound: 40001, upperBound: 100000, rate: 0.22 },
-                { lowerBound: 100001, upperBound: 200000, rate: 0.24 },
-                { lowerBound: 200001, upperBound: null, rate: 0.32 }
+                { lowerBound: 10000, upperBound: 40000, rate: 0.12 },
+                { lowerBound: 40000, upperBound: 100000, rate: 0.22 },
+                { lowerBound: 100000, upperBound: 200000, rate: 0.24 },
+                { lowerBound: 200000, upperBound: null, rate: 0.32 }
             ];
         }
         else if(filingStatus==="joint"){
             return [
                 { lowerBound: 0, upperBound: 20000, rate: 0.10 },
-                { lowerBound: 20001, upperBound: 80000, rate: 0.12 },
-                { lowerBound: 80001, upperBound: 200000, rate: 0.22 },
-                { lowerBound: 200001, upperBound: 400000, rate: 0.24 },
-                { lowerBound: 400001, upperBound: null, rate: 0.32 }
+                { lowerBound: 20000, upperBound: 80000, rate: 0.12 },
+                { lowerBound: 80000, upperBound: 200000, rate: 0.22 },
+                { lowerBound: 200000, upperBound: 400000, rate: 0.24 },
+                { lowerBound: 400000, upperBound: null, rate: 0.32 }
             ]
         }
         else{

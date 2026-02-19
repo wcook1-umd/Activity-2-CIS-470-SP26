@@ -59,7 +59,7 @@
 
 - t2: input: {income: 1000000, filingStatus: "Joint", mortgage:0, studentLoad:0, medicalExpenses:0} => output {federalTax: 270799.10, stateTax:49250.00}
 
-- t3: input: {income: 300000, filingStatus: "Individual", mortgage:0, studentLoad:10000, medicalExpenses:0} => output {federalTax: 70279.10, stateTax:14450.00}
+- t3: input: {income: 300000, filingStatus: "Individual", mortgage:0, studentLoad:10000, medicalExpenses:0} => output {federalTax: 67400.00, stateTax:14000.00}
 
 - t4: input: {income: 300000, filingStatus: "Joint", mortgage:0, studentLoad:1000, medicalExpenses:0} => output {federalTax: 55759.42, stateTax:14200.00}
 
